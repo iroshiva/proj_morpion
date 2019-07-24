@@ -3,14 +3,6 @@
 
 class Game
 
-	# attr_accessor :players
-	# # chaque instance aura deux variables : som nom et un symbole
-
-	# def initialize
-	# 	@players = [player1 = Player.new("#{name1}", "X"), player2 = Player.new("#{name2}", "O")]
-
-	# end
-
 
 	def mess_begin
 			puts " "
@@ -36,6 +28,19 @@ class Game
 			puts " "
 			puts "Allright bro, remember, you got the X!!!"
 	end
+
+	attr_accessor :players
+	# chaque instance aura deux variables : som nom et un symbole
+
+	def initialize
+		@players = [player1 = Player.new("#{name1}", "X"), player2 = Player.new("#{name2}", "O")]
+
+	end
+
+
+	
+
+
 
 end
 
