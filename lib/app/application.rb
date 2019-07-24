@@ -1,8 +1,8 @@
-# Application : cette classe va nous permettre de lancer le jeu. Elle va faire une boucle infinie de parties (on joue tant que les joueurs veulent continuer) et lancer l'instanciation d'un Game.
-
+ 
 class Application
+# cette classe va nous permettre de lancer le jeu. Elle va faire une boucle infinie de parties (on joue tant que les joueurs veulent continuer) et lancer l'instanciation d'un Game.
 
-	def mess_begin
+	# def mess_begin
 			puts " "
 			puts "Welcome to the puta madre morpion of the year!!!!!"
 			puts " "
@@ -18,12 +18,12 @@ class Application
 
 			enter = gets.chomp
 
-				if enter == "\n"
-					ask_name1
-				end
-	end
+			if enter == "\n"
+			end
+	# end
 
-	def ask_name1
+	# def ask_name1
+	# demande le nom du joueur1 et créée l'instance player1
 			puts " "
 			puts "Hi player1! Ready to play?"
 			puts " "
@@ -40,14 +40,14 @@ class Application
 
 			enter = gets.chomp
 
-				if enter == "\n"
-					ask_name2
-				end
+			if enter == "\n"
+			end
 
 
-	end
+	# end
 
-	def ask_name2
+	# def ask_name2
+	# demande le nom du joueur2 et créée l'instance player2
 			puts " "
 			puts "Hi player2! Ready to play?"
 			puts " "
@@ -59,7 +59,13 @@ class Application
 
 			puts " "
 			puts "Allright bro, remember, you got the O!!!"
-	end
+
+			enter = gets.chomp
+
+				if enter == "\n"
+					ask_name2
+				end
+	# end
 
 
 
@@ -70,4 +76,4 @@ end
 
 application1 = Application.new
 
-application1.ask_name1
+application1
