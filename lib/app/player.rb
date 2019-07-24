@@ -15,3 +15,7 @@ end
 
 binding.pry
 puts "end of file"
+
+
+# VOIR PLUS TARD POUR LE CHOIX DU SYMBOLE...
+# POUR L'INSTANT, le joueur peut tout taper
