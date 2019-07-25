@@ -38,28 +38,39 @@
 
 
   def victory?(player)
+  # détermine une victoire si:
 
   	if @board_array[0].symbols == player.symbol && @board_array[1].symbols == player.symbol && @board_array[2].symbols == player.symbol
+  	# 3 symboles identiques 1ère ligne
 
   	elsif @board_array[3].symbols == player.symbol && @board_array[4].symbols == player.symbol && @board_array[5].symbols == player.symbol
+  	# 3 symboles identiques 2ème ligne
 
   	elsif @board_array[6].symbols == player.symbol && @board_array[7].symbols == player.symbol && @board_array[8].symbols == player.symbol
+  	# 3 symboles identiques 3ème ligne
 
   	elsif @board_array[0].symbols == player.symbol && @board_array[3].symbols == player.symbol && @board_array[6].symbols == player.symbol
+  	# 3 symboles identiques 1ère colonne
 
   	elsif @board_array[1].symbols == player.symbol && @board_array[4].symbols == player.symbol && @board_array[7].symbols == player.symbol
+  	# 3 symboles identiques 2ème colonne
 
   	elsif @board_array[2].symbols == player.symbol && @board_array[5].symbols == player.symbol && @board_array[8].symbols == player.symbol
+  	# 3 symboles identiques 3ème colonne
 
   	elsif @board_array[0].symbols == player.symbol && @board_array[4].symbols == player.symbol && @board_array[8].symbols == player.symbol
+  	# 3 symboles identiques 1ère diagonale
 
   	elsif @board_array[2].symbols == player.symbol && @board_array[4].symbols == player.symbol && @board_array[6].symbols == player.symbol
+  	# 3 symboles identiques 2ème diagonale
 
   	elsif @board_array[0].symbols != ' ' && @board_array[1].symbols != ' ' && @board_array[2].symbols != ' ' && @board_array[3].symbols != ' ' && @board_array[4].symbols != ' ' && @board_array[5].symbols != ' ' && @board_array[6].symbols != ' ' && @board_array[7].symbols != ' ' && @board_array[8].symbols != ' '
+  	# ou EGALITE !!!!
 
   		puts " DRAW GAME SUCKERS!!!!"
 
   	else
+  	# sinon pas de vistoire, les joueurs continuent de jouer
   		false
   	end
   end

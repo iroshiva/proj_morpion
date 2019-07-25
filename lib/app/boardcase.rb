@@ -9,8 +9,6 @@ class Boardcase
 		def initialize(num_case)
 			@symbols = " "
 			@id_case = num_case		
-
-			
 		end
 
 end
