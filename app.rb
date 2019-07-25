@@ -4,10 +4,13 @@ Bundler.require
 $:.unshift File.expand_path("./../lib", __FILE__)
 require 'app/player'
 # require 'app/game'
-require 'app/application'
+require 'app/board'
+require 'app/boardcase'
 
 
-teste = App.new
+my_name = Player.new("Jean", "X")
 
-teste 
+teste = Board.new
 
+teste.play_turn(my_name)
+teste.victory?(my_name)

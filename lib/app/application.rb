@@ -1,6 +1,6 @@
 # $:.unshift File.expand_path("./../lib", __FILE__)
-require_relative './game'
-require_relative './player'
+# require_relative './game'
+# require_relative './player'
 # require_relative './show'
 
 class Application
