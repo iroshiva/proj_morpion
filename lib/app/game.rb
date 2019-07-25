@@ -1,4 +1,4 @@
-# require 'pry'
+require 'pry'
 # require_relative './board'
 
 class Game
@@ -6,6 +6,7 @@ class Game
 # prend une instance
 
 	attr_accessor :players
+	# :bordcases
 	# l'instance créée prends les variables players
 	
 
@@ -18,7 +19,7 @@ class Game
 	end
 
 	def player1_turn
-		puts "Your turn #{@players[0]}!"
+		puts "Your turn #{@players[1]}!"
 	end
 
 	def case
@@ -31,7 +32,6 @@ end
 # binding.pry
 # puts "end of file"
 
-# game1 = Game.new
+game1 = Game.new
 
-# game1.mess_begin
-# game1.ask_name1
+game1.player1_turn
