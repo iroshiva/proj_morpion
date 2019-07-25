@@ -28,10 +28,11 @@ class Game
 		@board.play_turn(@current_player)
 		if @board.victory?(@current_player) == false
 				@current_player = (@players.reverse!)[0]
-				turn
-		else 
-			puts "#{@current_player.name} is the big winner!!"
+				# turn
+		# else 
+		# 	puts "#{@current_player.name} is the big winner!!"
 		end
+		@board.play_turn(@current_player)
 	end
 
 	def new_round
