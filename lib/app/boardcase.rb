@@ -5,14 +5,12 @@ class Boardcase
 # créer 9 instances == 9 objets case qui constitueront les 9 cases à insérer dans la class Board
 	
 	attr_accessor :symbols, :id_case
-
-	# @@boardcase = []
 	
-	def initialize(num_case)
-		@symbols = " "
-		@id_case = num_case		
+		def initialize(num_case)
+			@symbols = " "
+			@id_case = num_case		
 
-		# @@boardcase = [@symbols, @id_case]
-	end
+			
+		end
 
 end

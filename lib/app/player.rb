@@ -1,4 +1,3 @@
-# require 'pry'
 
 
 class Player
@@ -13,5 +12,3 @@ class Player
 
 end
 
-# binding.pry
-# puts "end of file"
