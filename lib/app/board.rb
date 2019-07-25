@@ -29,10 +29,13 @@
       end
     end
     #1) demande au bon joueur ce qu'il souhaite faire
+    # array case_choice créé qui récupère les Boardcase "vides" de l'array board_array(boardcases initiales)
 
     user_choice = @prompt.select("So #{player.name}, where do you wanna put your #{player.symbol}?", case_choice)
+    # le joueur choisit sa case parmis les cases vides
+
     @board_array[user_choice].symbols = player.symbol
-		#2) change la BoardCase jouée en fonction de la valeur du joueur (X ou O)
+		# permet de sortir un chiffre correspondant à l'index au lieu de l'id de la bordcase
 
   end
 

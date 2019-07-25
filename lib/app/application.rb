@@ -1,12 +1,10 @@
-# $:.unshift File.expand_path("./../lib", __FILE__)
-# require_relative './game'
-# require_relative './player'
-# require_relative './show'
+
 
 class Application
 # cette classe va nous permettre de lancer le jeu. Elle va faire une boucle infinie de parties (on joue tant que les joueurs veulent continuer) et lancer l'instanciation d'un Game.
 
 	# attr_accessor :
+	attr_reader :my_game
 
 	def initialize
 
@@ -19,12 +17,13 @@ class Application
 
 	def perform
 
-		my_game = Game.new(@player1, @player2)
+		@my_game = Game.new(@player1, @player2)
 		my_game.turn
 
 	end
 
 	def mess_intro_game
+	# intro du jeu, définit les règles du jeu
 
 		puts " "
 		puts "Welcome to the puta madre morpion of the year!!!!!"
@@ -48,6 +47,7 @@ class Application
 
 	def ask_name1
 	# demande le nom du joueur1 et créée l'instance player1
+
 		puts " "
 		puts "Hi player1! Ready to play?"
 		puts " "
@@ -59,15 +59,12 @@ class Application
 
 		puts " "
 		puts "Allright bro, remember, you got the X!!!"
-		puts "press Enter!"
-
-		enter = gets.chomp
-		if enter == "\n"
-		end
+		
 	end
 
 	def ask_name2
 	# demande le nom du joueur2 et créée l'instance player2
+
 		puts " "
 		puts "Hi player2! Ready to play?"
 		puts " "
@@ -79,12 +76,6 @@ class Application
 
 		puts " "
 		puts "Allright bro, remember, you got the O!!!"
-		puts "press Enter!"
-
-		enter = gets.chomp
-
-			if enter == "\n"
-			end
+		
 	end
-
 end
