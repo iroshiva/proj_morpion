@@ -1,12 +1,13 @@
 # $:.unshift File.expand_path("./../lib", __FILE__)
-# require_relative './game'
-# require_relative './player'
+require_relative './game'
+require_relative './player'
 # require_relative './show'
 
 class Application
 # cette classe va nous permettre de lancer le jeu. Elle va faire une boucle infinie de parties (on joue tant que les joueurs veulent continuer) et lancer l'instanciation d'un Game.
 
-	def mess_begin
+	def initialize
+
 			puts " "
 			puts "Welcome to the puta madre morpion of the year!!!!!"
 			puts " "
@@ -24,9 +25,7 @@ class Application
 
 			if enter == "\n"
 			end
-	end
-
-	def ask_name1
+	
 	# demande le nom du joueur1 et créée l'instance player1
 			puts " "
 			puts "Hi player1! Ready to play?"
@@ -46,9 +45,7 @@ class Application
 
 			if enter == "\n"
 			end
-	end
-
-	def ask_name2
+	
 	# demande le nom du joueur2 et créée l'instance player2
 			puts " "
 			puts "Hi player2! Ready to play?"
@@ -67,15 +64,15 @@ class Application
 				if enter == "\n"
 					ask_name2
 				end
+	
 	end
-
-	def perform
-		mess_begin
-		ask_name1
-		ask_name2
-	end
+	# def perform
+	# 	mess_begin
+	# 	ask_name1
+	# 	ask_name2
+	# end
 end
 
-application1 = Application.new
+# application1 = Application.new
 
-application1.perform
+# application1.perform
